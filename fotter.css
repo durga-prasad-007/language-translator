@@ -1,0 +1,17 @@
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%; 
+    background-color: rgb(51, 17, 21);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer h5 {
+    margin: 0;
+}
+
+.ft img {
+    margin: 0 10px;
+}

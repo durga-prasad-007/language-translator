@@ -1,0 +1,28 @@
+.menu {
+    background-color:rgb(51, 17, 21);
+    padding: 10px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+     justify-content: space-between; 
+    gap:32px
+}
+
+.tran1, .tran2 {
+    padding: 8px 16px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tran1:hover, .tran2:hover {
+    background-color: #007bff;
+    color: #fff;
+}

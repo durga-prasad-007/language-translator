@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONLINE LANGUAGE TRANSLATOR</title>
+    <link rel="stylesheet" href="./dictionary.css">
+    <link rel="stylesheet" href="./translate.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./fotter.css"> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+            
+
+        }
+#video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1; 
+            pointer-events: none; 
+        }   
+    </style>
+</head>
+<body>
+    <video id="video-background" autoplay loop muted>
+        <source src="./Untitled ‑ Made with FlexClip (1).mp4" type="video/mp4">
+    </video>
+    
+<nav class="menu">
+    <div class="header">
+        <img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt="img">
+        <button class="tran1">TRANSLATOR</button>
+        <button class="tran2">DICTIONARY</button>
+        <img src="	https://www.microsoft.com/en-us/translator/wp-content/themes/ro-mwf/img/facebook.svg" alt="img" height="50px" width="50px">
+        <img src="	https://www.microsoft.com/en-us/translator/wp-content/themes/ro-mwf/img/twitter.svg" alt="img"  height="50px" width="50px">
+        <img src="	https://www.microsoft.com/en-us/translator/wp-content/themes/ro-mwf/img/youtube.svg" alt="img"  height="50px" width="50px">
+        <img src="	https://www.microsoft.com/en-us/translator/wp-content/themes/ro-mwf/img/rss.svg" alt="img"  height="50px" width="50px">
+    </div>
+</nav> 
+
+    <div id="translation-form">
+        <h2>TRANSLATOR</h2>
+        <form id="translationForm">
+            <select id="fromLanguage">
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="hi">Hindi</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+            </select>
+            <textarea id="textInput" rows="4" placeholder="Enter text to translate"></textarea>
+            <select id="toLanguage">
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="hi">Hindi</option>
+                <option value="ta">Tamil</option>
+                <option value="te">Telugu</option>
+            </select>
+            <textarea id="output" rows="4" placeholder="Translation will appear here" readonly></textarea>
+            <input type="submit" class="submit" value="Translate">
+        </form>
+    </div>
+
+    <div id="dictionary-form">
+        <h2>Dictionary Form</h2>
+        <form id="dictionaryForm">
+            <input type="search" id="dictionaryInput" placeholder="Enter a word">
+            <input type="submit" id="gh" value="Search">
+        </form>
+        <textarea id="dictionaryOutput" cols="30" rows="10" placeholder="Definition will appear here..." readonly></textarea>
+    </div>
+    <footer>
+        <h5>Powered by Microsoft Translator</h5>
+        <div class="ft">
+            <a href="https://www.microsoft.com/en-us/translator/" target="_blank">
+                <img src="https://www.microsoft.com/en-us/translator/wp-content/themes/ro-mwf/img/facebook.svg" alt="Facebook" height="50px" width="100px">
+            </a>
+            <a href="https://twitter.com/MSFTTranslator" target="_blank">
+                <img src="https://www.microsoft.com/en-us/translator/wp-content/themes/ro-mwf/img/twitter.svg" alt="Twitter" height="50px" width="100px">
+            </a>
+            <a href="https://www.youtube.com/user/MSFTTranslator" target="_blank">
+                <img src="https://www.microsoft.com/en-us/translator/wp-content/themes/ro-mwf/img/youtube.svg" alt="YouTube" height="50px" width="100px">
+            </a>
+            <a href="https://www.microsoft.com/en-us/translator/blog/" target="_blank">
+                <img src="https://www.microsoft.com/en-us/translator/wp-content/themes/ro-mwf/img/rss.svg" alt="RSS" height="50px" width="100px">
+            </a>
+        </div>
+    </footer>
+    
+    
+    
+<script src="./dictionary.js"></script>
+<script src="./translate.js"></script>
+    <script>
+        var trans=document.getElementsByClassName("tran1")
+        trans[0].addEventListener("click",()=>{
+            document.getElementById("dictionary-form").style.display="none"
+            document.getElementById("translation-form").style.display="block"
+        })
+
+      var trans2=document.getElementsByClassName("tran2")
+      trans2[0].addEventListener("click",()=>{
+        document.getElementById("translation-form").style.display="none"
+        document.getElementById("dictionary-form").style.display="block"
+      })
+    </script>
+</body>
+</html>

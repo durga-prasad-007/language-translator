@@ -1,0 +1,59 @@
+#translation-form { 
+    background-color: greenyellow;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%; 
+            max-width: 600px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 30px; 
+           
+}
+        select, textarea, input[type="submit"] {
+            width:400px; 
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            width: 400px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            transition: background-color 0.3s ease;
+            margin-left: 86px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        h1,h2 {
+            color: whitesmoke;
+            background-color: blue;
+            text-align: center;
+            padding: 10px; 
+        }
+        #translation-form{
+            display: none;
+        }
+        select,textarea,.submit{
+            margin-left: 80px;
+        }
+        @media only screen and (max-width: 600px) {
+            form {
+                width: 90%; 
+            }
+            select, textarea, input[type="submit"] {
+                width: 100%; 
+            }
+        }
